@@ -15,15 +15,17 @@ const menuData = [
     { id: 13, name: "Topping Lainnya", price: 2000, category: "seblak" },
     { id: 14, name: "Jamur Enoki", price: 1000, category: "seblak" },
     { id: 15, name: "Sosis", price: 2000, category: "seblak" },
-
-    // Menu Lainnya
     { id: 16, name: "Soteng", price: 5000, category: "lainnya" },
     { id: 17, name: "Gorengan (3 Pcs)", price: 2000, category: "lainnya" },
     { id: 18, name: "Mie Pedas", price: 7000, category: "lainnya" },
     { id: 19, name: "Pop Ice", price: 3000, category: "lainnya" },
     { id: 20, name: "Es Cekek", price: 1000, category: "lainnya" },
     { id: 21, name: "Topping Soteng", price: 1000, category: "lainnya" },
-    { id: 22, name: "Spaghetti Lite", price: 5000, category: "spaghetti", description: "Tulang, Sayur, Telur Puyuh, Telur Ayam, Ayam Tabur" },
+    { id: 22, name: "Spaghetti Lite", price: 5000, category: "spaghetti", description: "Tulang & Sayur" },
+    { id: 23, name: "Tulang", price: 500, category: "spaghetti" },
+    { id: 24, name: "Daging Ayam Tabur", price: 1000, category: "spaghetti" },
+    { id: 25, name: "Telur Puyuh", price: 500, category: "spaghetti" },
+    { id: 26, name: "Telur Ayam", price: 2500, category: "spaghetti" },
 ];
 
 const cart = [];
