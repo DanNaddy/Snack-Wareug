@@ -22,7 +22,8 @@ const menuData = [
     { id: 18, name: "Mie Pedas", price: 7000, category: "lainnya" },
     { id: 19, name: "Pop Ice", price: 3000, category: "lainnya" },
     { id: 20, name: "Es Cekek", price: 1000, category: "lainnya" },
-    { id: 21, name: "Topping Soteng", price: 1000, category: "lainnya" }, // Taking the lower bound
+    { id: 21, name: "Topping Soteng", price: 1000, category: "lainnya" },
+    { id: 22, name: "Spaghetti Lite", price: 5000, category: "spaghetti", description: "Tulang, Sayur, Telur Puyuh, Telur Ayam, Ayam Tabur" },
 ];
 
 const cart = [];
@@ -43,6 +44,7 @@ function renderMenu(category = 'seblak') {
         itemEl.innerHTML = `
             <div class="item-content">
                 <h4 class="item-name">${item.name}</h4>
+                ${item.description ? `<p class="item-desc">${item.description}</p>` : ''}
                 <p class="item-price">Rp ${item.price.toLocaleString('id-ID')}</p>
             </div>
             <button class="add-btn" onclick="addToCart(${item.id})">
