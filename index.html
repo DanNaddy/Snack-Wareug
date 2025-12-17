@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jajanan Wareug | Seblak & Cemilan Enak</title>
+    <meta name="description" content="Menu digital Jajanan Wareug. Seblak prasmanan dan aneka jajanan murah meriah!">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <h1 class="logo">Jajanan <span>Wareug</span></h1>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Kontak</a>
+            </div>
+            <div class="cart-icon-wrapper" id="cart-btn">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span class="cart-badge" id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2>Jajan Puas,<br>Harga Pas!</h2>
+                <p>Nikmati aneka Seblak Prasmanan dan jajanan hits lainnya. Pedasnya nampol, rasanya mantul!</p>
+                <a href="#menu" class="btn btn-primary">Lihat Menu <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-image">
+                <!-- Decorative Elements imitating the flyer -->
+                <div class="decoration dec-1"></div>
+                <div class="decoration dec-2"></div>
+                <img src="hero-image.png" alt="Seblak Enak" class="hero-img-main">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-title">
+                <h3>Daftar Menu</h3>
+                <p>Pilih toping seblak favoritmu sesuka hati!</p>
+            </div>
+
+            <!-- Categories -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="seblak">Seblak Prasmanan</button>
+                <button class="tab-btn" data-category="lainnya">Menu Lainnya</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-container">
+                <!-- Javascript will populate this -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal-overlay" id="cart-overlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h3>Pesananmu</h3>
+                <button id="close-cart"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items go here -->
+                <div class="empty-cart-msg">Keranjang masih kosong nih :(</div>
+            </div>
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span>Total:</span>
+                    <span id="cart-total">Rp 0</span>
+                </div>
+                <button id="checkout-btn" class="btn btn-primary btn-block">
+                    <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop>
+        <source src="bilqis_prayer.mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung audio elemen.
+    </audio>
+
+    <!-- Music Auto-Play Overlay -->
+    <div id="music-overlay" class="music-overlay">
+        <div class="overlay-content">
+            <h2>Selamat Datang!</h2>
+            <p>Klik di bawah untuk masuk ke Jajanan Wareug</p>
+            <button id="enter-btn" class="btn btn-primary btn-large">
+                <i class="fa-solid fa-play"></i> Masuk
+            </button>
+        </div>
+    </div>
+
+    <!-- Music Control Button -->
+    <button id="music-control" class="music-control-btn hidden">
+        <i class="fa-solid fa-volume-high"></i>
+    </button>
+
+    <!-- Contact/Footer -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h4>Jajanan Wareug</h4>
+                <p><a href="https://maps.app.goo.gl/5wd66o6eGfRbCKYLA" target="_blank"
+                        style="text-decoration: underline;">Lokasi: Klik untuk lihat di Google Maps</a></p>
+                <p>Buka Setiap Hari: 10.00 - 21.00 WIB</p>
+            </div>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://wa.me/628388046510" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Jajanan Wareug. Created with love.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
