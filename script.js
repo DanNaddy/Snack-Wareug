@@ -1,6 +1,6 @@
 // ========================================
-// JAJANAN WAREUG - CREATIVE JAVASCRIPT
-// Particles, Magnetic Effects, Scroll Reveal
+// JAJANAN WAREUG - COZY WARUNG THEME
+// Floating Doodles, Steam, Food Confetti
 // ========================================
 
 // ========================================
@@ -8,32 +8,32 @@
 // ========================================
 const menuData = [
     // Seblak
-    { id: 1, name: "All Kerupuk", price: 1000, category: "seblak" },
-    { id: 2, name: "Kwetiau", price: 1000, category: "seblak" },
-    { id: 3, name: "Tulang", price: 500, category: "seblak" },
-    { id: 4, name: "Telur", price: 2500, category: "seblak" },
-    { id: 5, name: "Mie", price: 1000, category: "seblak" },
-    { id: 6, name: "Makaroni", price: 1000, category: "seblak" },
-    { id: 7, name: "Pilus Cikur", price: 1000, category: "seblak" },
-    { id: 8, name: "Siomay Kering", price: 1000, category: "seblak" },
-    { id: 9, name: "Telur Puyuh", price: 500, category: "seblak" },
-    { id: 10, name: "Cuanki Lidah", price: 1000, category: "seblak" },
-    { id: 11, name: "Cilok", price: 1000, category: "seblak" },
-    { id: 12, name: "Bakso", price: 2000, category: "seblak" },
-    { id: 13, name: "Topping Lainnya", price: 2000, category: "seblak" },
-    { id: 14, name: "Jamur Enoki", price: 1000, category: "seblak" },
-    { id: 15, name: "Sosis", price: 2000, category: "seblak" },
-    { id: 16, name: "Soteng", price: 5000, category: "lainnya" },
-    { id: 17, name: "Gorengan (3 Pcs)", price: 2000, category: "lainnya" },
-    { id: 18, name: "Mie Pedas", price: 7000, category: "lainnya" },
-    { id: 19, name: "Pop Ice", price: 3000, category: "lainnya" },
-    { id: 20, name: "Es Cekek", price: 1000, category: "lainnya" },
-    { id: 21, name: "Topping Soteng", price: 1000, category: "lainnya" },
-    { id: 22, name: "Spaghetti Lite", price: 5000, category: "spaghetti", description: "Tulang & Sayur" },
-    { id: 23, name: "Tulang", price: 500, category: "spaghetti" },
-    { id: 24, name: "Daging Ayam Tabur", price: 1000, category: "spaghetti" },
-    { id: 25, name: "Telur Puyuh", price: 500, category: "spaghetti" },
-    { id: 26, name: "Telur Ayam", price: 2500, category: "spaghetti" },
+    { id: 1, name: "All Kerupuk", price: 1000, category: "seblak", emoji: "🍘" },
+    { id: 2, name: "Kwetiau", price: 1000, category: "seblak", emoji: "🍜" },
+    { id: 3, name: "Tulang", price: 500, category: "seblak", emoji: "🦴" },
+    { id: 4, name: "Telur", price: 2500, category: "seblak", emoji: "🥚" },
+    { id: 5, name: "Mie", price: 1000, category: "seblak", emoji: "🍝" },
+    { id: 6, name: "Makaroni", price: 1000, category: "seblak", emoji: "🧀" },
+    { id: 7, name: "Pilus Cikur", price: 1000, category: "seblak", emoji: "🥜" },
+    { id: 8, name: "Siomay Kering", price: 1000, category: "seblak", emoji: "🥟" },
+    { id: 9, name: "Telur Puyuh", price: 500, category: "seblak", emoji: "🥚" },
+    { id: 10, name: "Cuanki Lidah", price: 1000, category: "seblak", emoji: "🍢" },
+    { id: 11, name: "Cilok", price: 1000, category: "seblak", emoji: "🍡" },
+    { id: 12, name: "Bakso", price: 2000, category: "seblak", emoji: "🍖" },
+    { id: 13, name: "Topping Lainnya", price: 2000, category: "seblak", emoji: "✨" },
+    { id: 14, name: "Jamur Enoki", price: 1000, category: "seblak", emoji: "🍄" },
+    { id: 15, name: "Sosis", price: 2000, category: "seblak", emoji: "🌭" },
+    { id: 16, name: "Soteng", price: 5000, category: "lainnya", emoji: "🌽" },
+    { id: 17, name: "Gorengan (3 Pcs)", price: 2000, category: "lainnya", emoji: "🍤" },
+    { id: 18, name: "Mie Pedas", price: 7000, category: "lainnya", emoji: "🌶️" },
+    { id: 19, name: "Pop Ice", price: 3000, category: "lainnya", emoji: "🧊" },
+    { id: 20, name: "Es Cekek", price: 1000, category: "lainnya", emoji: "🍧" },
+    { id: 21, name: "Topping Soteng", price: 1000, category: "lainnya", emoji: "🧄" },
+    { id: 22, name: "Spaghetti Lite", price: 5000, category: "spaghetti", description: "Tulang & Sayur", emoji: "🍝" },
+    { id: 23, name: "Tulang", price: 500, category: "spaghetti", emoji: "🦴" },
+    { id: 24, name: "Daging Ayam Tabur", price: 1000, category: "spaghetti", emoji: "🍗" },
+    { id: 25, name: "Telur Puyuh", price: 500, category: "spaghetti", emoji: "🥚" },
+    { id: 26, name: "Telur Ayam", price: 2500, category: "spaghetti", emoji: "🍳" },
 ];
 
 const cart = [];
@@ -44,20 +44,19 @@ const cartCountElement = document.getElementById('cart-count');
 const cartTotalElement = document.getElementById('cart-total');
 
 // ========================================
-// PARTICLE CURSOR TRAIL EFFECT
+// FOOD CONFETTI EFFECT
 // ========================================
-class ParticleTrail {
+class FoodConfetti {
     constructor() {
-        this.canvas = document.getElementById('particle-canvas');
+        this.canvas = document.getElementById('confetti-canvas');
         if (!this.canvas) return;
 
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
-        this.mouse = { x: 0, y: 0 };
-        this.colors = ['#ff6b9d', '#c85afc', '#00d4ff', '#b8ff57'];
+        this.emojis = ['🌶️', '🍜', '🍘', '🥢', '💨', '✨', '🔥', '😋'];
 
         this.resize();
-        this.bindEvents();
+        window.addEventListener('resize', () => this.resize());
         this.animate();
     }
 
@@ -66,26 +65,24 @@ class ParticleTrail {
         this.canvas.height = window.innerHeight;
     }
 
-    bindEvents() {
-        window.addEventListener('resize', () => this.resize());
-
-        document.addEventListener('mousemove', (e) => {
-            this.mouse.x = e.clientX;
-            this.mouse.y = e.clientY;
-
-            // Create particles on mouse move
-            for (let i = 0; i < 2; i++) {
-                this.particles.push({
-                    x: this.mouse.x,
-                    y: this.mouse.y,
-                    size: Math.random() * 4 + 2,
-                    color: this.colors[Math.floor(Math.random() * this.colors.length)],
-                    speedX: (Math.random() - 0.5) * 2,
-                    speedY: (Math.random() - 0.5) * 2,
-                    life: 1
-                });
-            }
-        });
+    burst(x, y, emoji) {
+        const count = 12;
+        for (let i = 0; i < count; i++) {
+            const angle = (Math.PI * 2 / count) * i;
+            const velocity = 5 + Math.random() * 5;
+            this.particles.push({
+                x,
+                y,
+                vx: Math.cos(angle) * velocity,
+                vy: Math.sin(angle) * velocity - 3,
+                emoji: emoji || this.emojis[Math.floor(Math.random() * this.emojis.length)],
+                size: 20 + Math.random() * 15,
+                rotation: Math.random() * 360,
+                rotationSpeed: (Math.random() - 0.5) * 10,
+                life: 1,
+                gravity: 0.15
+            });
+        }
     }
 
     animate() {
@@ -94,75 +91,33 @@ class ParticleTrail {
         for (let i = this.particles.length - 1; i >= 0; i--) {
             const p = this.particles[i];
 
-            p.x += p.speedX;
-            p.y += p.speedY;
-            p.life -= 0.02;
-            p.size *= 0.98;
+            p.x += p.vx;
+            p.vy += p.gravity;
+            p.y += p.vy;
+            p.rotation += p.rotationSpeed;
+            p.life -= 0.015;
 
-            if (p.life <= 0 || p.size < 0.5) {
+            if (p.life <= 0 || p.y > this.canvas.height) {
                 this.particles.splice(i, 1);
                 continue;
             }
 
-            this.ctx.beginPath();
-            this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            this.ctx.fillStyle = p.color;
+            this.ctx.save();
+            this.ctx.translate(p.x, p.y);
+            this.ctx.rotate(p.rotation * Math.PI / 180);
             this.ctx.globalAlpha = p.life;
-            this.ctx.fill();
+            this.ctx.font = `${p.size}px serif`;
+            this.ctx.textAlign = 'center';
+            this.ctx.textBaseline = 'middle';
+            this.ctx.fillText(p.emoji, 0, 0);
+            this.ctx.restore();
         }
 
-        this.ctx.globalAlpha = 1;
         requestAnimationFrame(() => this.animate());
     }
 }
 
-// ========================================
-// 3D CARD TILT EFFECT
-// ========================================
-function initCardTilt() {
-    document.querySelectorAll('.menu-item').forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
-
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-
-            // Update glow position
-            card.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
-            card.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-        });
-    });
-}
-
-// ========================================
-// MAGNETIC BUTTON EFFECT
-// ========================================
-function initMagneticButtons() {
-    document.querySelectorAll('.btn, .add-btn, .cart-icon-wrapper').forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-
-            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-        });
-
-        btn.addEventListener('mouseleave', () => {
-            btn.style.transform = 'translate(0, 0)';
-        });
-    });
-}
+let confetti;
 
 // ========================================
 // SCROLL REVEAL ANIMATION
@@ -171,15 +126,14 @@ function initScrollReveal() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Stagger animation
                 setTimeout(() => {
                     entry.target.classList.add('visible');
-                }, index * 100);
+                }, index * 80);
             }
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -30px 0px'
     });
 
     document.querySelectorAll('.menu-item, .reveal').forEach(el => {
@@ -188,7 +142,36 @@ function initScrollReveal() {
 }
 
 // ========================================
-// RENDER MENU WITH STAGGER ANIMATION
+// PLAYFUL HOVER EFFECTS
+// ========================================
+function initPlayfulEffects() {
+    // Squish effect on menu cards
+    document.querySelectorAll('.menu-item').forEach(card => {
+        card.addEventListener('mousedown', () => {
+            card.style.transform = 'scale(0.95)';
+        });
+
+        card.addEventListener('mouseup', () => {
+            card.style.transform = '';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+
+    // Bounce effect on buttons
+    document.querySelectorAll('.btn, .tab-btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            btn.style.animation = 'none';
+            btn.offsetHeight; // Trigger reflow
+            btn.style.animation = '';
+        });
+    });
+}
+
+// ========================================
+// RENDER MENU WITH STAGGER
 // ========================================
 function renderMenu(category = 'seblak') {
     menuContainer.innerHTML = '';
@@ -197,21 +180,21 @@ function renderMenu(category = 'seblak') {
     filteredItems.forEach((item, index) => {
         const itemEl = document.createElement('div');
         itemEl.classList.add('menu-item');
-        itemEl.style.transitionDelay = `${index * 0.08}s`;
+        itemEl.style.transitionDelay = `${index * 0.1}s`;
 
         itemEl.innerHTML = `
             <div class="item-content">
-                <h4 class="item-name">${item.name}</h4>
+                <h4 class="item-name">${item.emoji} ${item.name}</h4>
                 ${item.description ? `<p class="item-desc">${item.description}</p>` : ''}
                 <p class="item-price">Rp ${item.price.toLocaleString('id-ID')}</p>
             </div>
-            <button class="add-btn" onclick="addToCart(${item.id})">
+            <button class="add-btn" data-emoji="${item.emoji}" onclick="addToCart(${item.id})">
                 <i class="fa-solid fa-plus"></i>
             </button>
         `;
         menuContainer.appendChild(itemEl);
 
-        // Trigger animation after append
+        // Trigger animation
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
                 itemEl.classList.add('visible');
@@ -219,10 +202,9 @@ function renderMenu(category = 'seblak') {
         });
     });
 
-    // Re-init interactive effects
+    // Re-init effects
     setTimeout(() => {
-        initCardTilt();
-        initMagneticButtons();
+        initPlayfulEffects();
     }, 100);
 }
 
@@ -240,70 +222,43 @@ window.addToCart = function (id) {
     }
     updateCartUI();
 
-    // Enhanced animation feedback
+    // Get button and add wobble animation
     const btn = event.currentTarget;
-    btn.style.transform = 'scale(1.3) rotate(180deg)';
-    btn.style.boxShadow = '0 0 30px rgba(184, 255, 87, 0.8)';
+    btn.classList.add('wobble');
+    setTimeout(() => btn.classList.remove('wobble'), 500);
 
-    setTimeout(() => {
-        btn.style.transform = 'scale(1) rotate(0deg)';
-        btn.style.boxShadow = '';
-    }, 300);
+    // Burst food confetti!
+    if (confetti) {
+        const rect = btn.getBoundingClientRect();
+        const emoji = btn.dataset.emoji || '🌶️';
+        confetti.burst(rect.left + rect.width / 2, rect.top + rect.height / 2, emoji);
+    }
 
-    // Create burst particles
-    createBurstParticles(event.clientX, event.clientY);
+    // Play a subtle sound effect (optional)
+    playPopSound();
 };
 
-// Burst particles on add to cart
-function createBurstParticles(x, y) {
-    const canvas = document.getElementById('particle-canvas');
-    if (!canvas) return;
+// Simple pop sound using Web Audio API
+function playPopSound() {
+    try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
 
-    const ctx = canvas.getContext('2d');
-    const particles = [];
-    const colors = ['#b8ff57', '#00d4ff', '#ff6b9d'];
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
 
-    for (let i = 0; i < 15; i++) {
-        const angle = (Math.PI * 2 / 15) * i;
-        particles.push({
-            x: x,
-            y: y,
-            speedX: Math.cos(angle) * (Math.random() * 5 + 3),
-            speedY: Math.sin(angle) * (Math.random() * 5 + 3),
-            size: Math.random() * 6 + 3,
-            color: colors[Math.floor(Math.random() * colors.length)],
-            life: 1
-        });
+        oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1);
+
+        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.1);
+    } catch (e) {
+        // Audio not supported, fail silently
     }
-
-    function animateBurst() {
-        for (let i = particles.length - 1; i >= 0; i--) {
-            const p = particles[i];
-            p.x += p.speedX;
-            p.y += p.speedY;
-            p.life -= 0.03;
-            p.size *= 0.95;
-
-            if (p.life <= 0) {
-                particles.splice(i, 1);
-                continue;
-            }
-
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            ctx.fillStyle = p.color;
-            ctx.globalAlpha = p.life;
-            ctx.fill();
-        }
-
-        ctx.globalAlpha = 1;
-
-        if (particles.length > 0) {
-            requestAnimationFrame(animateBurst);
-        }
-    }
-
-    animateBurst();
 }
 
 window.removeFromCart = function (id) {
@@ -332,7 +287,7 @@ function updateCartUI() {
     let count = 0;
 
     if (cart.length === 0) {
-        cartItemsContainer.innerHTML = '<div class="empty-cart-msg">Keranjang kosong. Yuk jajan! 🛒</div>';
+        cartItemsContainer.innerHTML = '<div class="empty-cart-msg">Keranjang kosong 🛒<br>Yuk pilih jajanannya!</div>';
     } else {
         cart.forEach((item, index) => {
             total += item.price * item.quantity;
@@ -340,11 +295,11 @@ function updateCartUI() {
 
             const cartItemEl = document.createElement('div');
             cartItemEl.classList.add('cart-item');
-            cartItemEl.style.animation = `fadeSlideIn 0.3s ease ${index * 0.05}s both`;
+            cartItemEl.style.animation = `slideIn 0.3s ease ${index * 0.05}s both`;
 
             cartItemEl.innerHTML = `
                 <div class="cart-item-info">
-                    <h4>${item.name}</h4>
+                    <h4>${item.emoji} ${item.name}</h4>
                     <p>Rp ${item.price.toLocaleString('id-ID')} x ${item.quantity}</p>
                 </div>
                 <div class="cart-controls">
@@ -361,28 +316,31 @@ function updateCartUI() {
     cartTotalElement.innerText = `Rp ${total.toLocaleString('id-ID')}`;
     cartCountElement.innerText = count;
 
-    // Animate badge
+    // Bouncy badge animation
     cartCountElement.classList.add('bump');
-    setTimeout(() => cartCountElement.classList.remove('bump'), 300);
+    setTimeout(() => cartCountElement.classList.remove('bump'), 400);
 }
 
 // ========================================
 // WHATSAPP INTEGRATION
 // ========================================
 document.getElementById('checkout-btn').addEventListener('click', () => {
-    if (cart.length === 0) return alert('Pilih jajanannya dulu dong!');
+    if (cart.length === 0) {
+        alert('Pilih jajanannya dulu dong! 🍜');
+        return;
+    }
 
-    let message = "Halo Jajanan Wareug! Saya mau pesan:%0A%0A";
+    let message = "Halo Jajanan Wareug! 👋 Saya mau pesan:%0A%0A";
     let total = 0;
 
     cart.forEach(item => {
         const subtotal = item.price * item.quantity;
         total += subtotal;
-        message += `- ${item.name} (${item.quantity}x) : Rp ${subtotal.toLocaleString('id-ID')}%0A`;
+        message += `${item.emoji} ${item.name} (${item.quantity}x) : Rp ${subtotal.toLocaleString('id-ID')}%0A`;
     });
 
-    message += `%0A*Total: Rp ${total.toLocaleString('id-ID')}*`;
-    message += "%0A%0ATerima kasih!";
+    message += `%0A💰 *Total: Rp ${total.toLocaleString('id-ID')}*`;
+    message += "%0A%0ATerima kasih! 🙏";
 
     const phoneNumber = "628388046510";
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
@@ -395,23 +353,6 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
-        // Add click ripple effect
-        const ripple = document.createElement('span');
-        ripple.style.cssText = `
-            position: absolute;
-            background: rgba(255,255,255,0.3);
-            border-radius: 50%;
-            transform: scale(0);
-            animation: ripple 0.6s linear;
-            pointer-events: none;
-        `;
-        btn.style.position = 'relative';
-        btn.style.overflow = 'hidden';
-        btn.appendChild(ripple);
-
-        setTimeout(() => ripple.remove(), 600);
-
         renderMenu(btn.dataset.category);
     });
 });
@@ -483,58 +424,43 @@ if (enterBtn && music && overlay && musicControl) {
 // ========================================
 // NAVBAR SCROLL EFFECT
 // ========================================
-let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
-        navbar.style.background = 'rgba(15, 15, 35, 0.95)';
+    if (window.pageYOffset > 50) {
+        navbar.style.boxShadow = '8px 8px 20px rgba(139, 69, 19, 0.2), -8px -8px 20px rgba(255, 255, 255, 0.95)';
     } else {
-        navbar.style.background = 'rgba(15, 15, 35, 0.8)';
+        navbar.style.boxShadow = '';
     }
-
-    lastScroll = currentScroll;
 });
 
 // ========================================
-// INITIALIZE EVERYTHING
+// ADD DYNAMIC KEYFRAMES
+// ========================================
+const styleSheet = document.createElement('style');
+styleSheet.textContent = `
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+`;
+document.head.appendChild(styleSheet);
+
+// ========================================
+// INITIALIZE
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize particle trail
-    new ParticleTrail();
-
-    // Render menu
+    confetti = new FoodConfetti();
     renderMenu();
-
-    // Initialize interactive effects
     initScrollReveal();
-    initMagneticButtons();
-
-    // Add CSS animation keyframes dynamically
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes fadeSlideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes ripple {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
+    initPlayfulEffects();
 });
 
-// Initialize on load
+// Initial render
 renderMenu();

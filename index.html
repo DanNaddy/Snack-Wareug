@@ -7,13 +7,6 @@
     <title>Jajanan Wareug | Seblak & Cemilan Enak</title>
     <meta name="description" content="Menu digital Jajanan Wareug. Seblak prasmanan dan aneka jajanan murah meriah!">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -23,20 +16,23 @@
 
 <body>
 
-    <!-- Animated Background Blobs -->
-    <div class="blob-container">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+    <!-- Floating Food Doodles -->
+    <div class="doodles-container">
+        <div class="doodle">🌶️</div>
+        <div class="doodle">🍜</div>
+        <div class="doodle">💨</div>
+        <div class="doodle">🍘</div>
+        <div class="doodle">🔥</div>
+        <div class="doodle">✨</div>
     </div>
 
-    <!-- Particle Canvas for Cursor Trail -->
-    <canvas id="particle-canvas"></canvas>
+    <!-- Confetti Canvas for Food Emoji Bursts -->
+    <canvas id="confetti-canvas"></canvas>
 
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-content">
-            <h1 class="logo">Jajanan <span>Wareug</span></h1>
+            <h1 class="logo">🍜 Jajanan <span>Wareug</span></h1>
             <div class="nav-links">
                 <a href="#home" class="active">Home</a>
                 <a href="#menu">Menu</a>
@@ -54,13 +50,19 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <h2>Jajan Puas,<br>Harga Pas!</h2>
-                <p>Nikmati aneka Seblak Prasmanan dan jajanan hits lainnya. Pedasnya nampol, rasanya mantul!</p>
+                <p>Nikmati aneka Seblak Prasmanan dan jajanan hits lainnya. Pedasnya nampol, rasanya mantul! 🔥</p>
                 <a href="#menu" class="btn btn-primary">Lihat Menu <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="hero-image">
-                <!-- Decorative Elements imitating the flyer -->
-                <div class="decoration dec-1"></div>
-                <div class="decoration dec-2"></div>
+                <!-- Steam Animation -->
+                <div class="steam-container">
+                    <div class="steam"></div>
+                    <div class="steam"></div>
+                    <div class="steam"></div>
+                </div>
+                <!-- Floating Decorations -->
+                <div class="decoration dec-1">🌶️</div>
+                <div class="decoration dec-2">🍘</div>
                 <img src="hero-image.png" alt="Seblak Enak" class="hero-img-main">
             </div>
         </div>
@@ -71,14 +73,14 @@
         <div class="container">
             <div class="section-title">
                 <h3>Daftar Menu</h3>
-                <p>Pilih toping seblak favoritmu sesuka hati!</p>
+                <p>Pilih toping seblak favoritmu sesuka hati! ✨</p>
             </div>
 
             <!-- Categories -->
             <div class="menu-tabs">
-                <button class="tab-btn active" data-category="seblak">Seblak Prasmanan</button>
-                <button class="tab-btn" data-category="spaghetti">Spaghetti</button>
-                <button class="tab-btn" data-category="lainnya">Menu Lainnya</button>
+                <button class="tab-btn active" data-category="seblak">🍜 Seblak Prasmanan</button>
+                <button class="tab-btn" data-category="spaghetti">🍝 Spaghetti</button>
+                <button class="tab-btn" data-category="lainnya">🍿 Menu Lainnya</button>
             </div>
 
             <!-- Menu Grid -->
@@ -92,12 +94,12 @@
     <div class="cart-modal-overlay" id="cart-overlay">
         <div class="cart-modal">
             <div class="cart-header">
-                <h3>Pesananmu</h3>
+                <h3>🛒 Pesananmu</h3>
                 <button id="close-cart"><i class="fa-solid fa-times"></i></button>
             </div>
             <div class="cart-items" id="cart-items">
                 <!-- Cart items go here -->
-                <div class="empty-cart-msg">Keranjang masih kosong nih :(</div>
+                <div class="empty-cart-msg">Keranjang masih kosong 🛒<br>Yuk pilih jajanannya!</div>
             </div>
             <div class="cart-footer">
                 <div class="total-row">
@@ -120,10 +122,10 @@
     <!-- Music Auto-Play Overlay -->
     <div id="music-overlay" class="music-overlay">
         <div class="overlay-content">
-            <h2>Selamat Datang!</h2>
-            <p>Klik di bawah untuk masuk ke Jajanan Wareug</p>
+            <h2>🍜 Selamat Datang!</h2>
+            <p>Klik untuk masuk ke Jajanan Wareug</p>
             <button id="enter-btn" class="btn btn-primary btn-large">
-                <i class="fa-solid fa-play"></i> Masuk
+                <i class="fa-solid fa-utensils"></i> Masuk Yuk!
             </button>
         </div>
     </div>
@@ -137,10 +139,10 @@
     <footer id="contact">
         <div class="container footer-content">
             <div class="footer-info">
-                <h4>Jajanan Wareug</h4>
-                <p><a href="https://maps.app.goo.gl/5wd66o6eGfRbCKYLA" target="_blank"
-                        style="text-decoration: underline;">Lokasi: Klik untuk lihat di Google Maps</a></p>
-                <p>Buka Setiap Hari: 10.00 - 21.00 WIB</p>
+                <h4>🍜 Jajanan Wareug</h4>
+                <p><a href="https://maps.app.goo.gl/5wd66o6eGfRbCKYLA" target="_blank">📍 Lokasi: Klik untuk lihat di
+                        Google Maps</a></p>
+                <p>🕐 Buka Setiap Hari: 10.00 - 21.00 WIB</p>
             </div>
             <div class="socials">
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -149,7 +151,7 @@
             </div>
         </div>
         <div class="copyright">
-            &copy; 2025 Jajanan Wareug. Created with love.
+            &copy; 2025 Jajanan Wareug. Made with ❤️
         </div>
     </footer>
 
