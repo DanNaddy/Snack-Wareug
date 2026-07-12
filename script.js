@@ -342,7 +342,7 @@ document.getElementById('checkout-btn').addEventListener('click', () => {
     message += `%0A💰 *Total: Rp ${total.toLocaleString('id-ID')}*`;
     message += "%0A%0ATerima kasih! 🙏";
 
-    const phoneNumber = "628388046510";
+    const phoneNumber = "6281296986113";
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
 });
 
